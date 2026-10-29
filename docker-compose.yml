@@ -1,0 +1,10 @@
+services:
+  rtl-visualizer:
+    build: .
+    container_name: rtl-visualizer
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./rtl:/app/rtl:ro
+    restart: unless-stopped
+    init: true
